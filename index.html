@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Piano UI</title>
+  <style>
+    body{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      height:100vh;
+      background:#222;
+    }
+
+    #piano{
+      display:flex;
+      position:relative;
+    }
+
+    .white{
+      width:70px;
+      height:250px;
+      background:white;
+      border:1px solid black;
+      display:flex;
+      justify-content:center;
+      align-items:flex-end;
+      padding-bottom:10px;
+      font-size:20px;
+      font-weight:bold;
+      cursor:pointer;
+      user-select:none;
+    }
+
+    .black{
+      width:40px;
+      height:150px;
+      background:black;
+      color:white;
+      position:absolute;
+      top:0;
+      z-index:2;
+      display:flex;
+      justify-content:center;
+      align-items:flex-end;
+      padding-bottom:10px;
+      font-size:14px;
+      font-weight:bold;
+      cursor:pointer;
+      user-select:none;
+    }
+
+    .b1{ left:50px; }
+    .b2{ left:120px; }
+    .b3{ left:260px; }
+    .b4{ left:330px; }
+    .b5{ left:400px; }
+
+    .active{
+      transform:translateY(4px);
+    }
+  </style>
+</head>
+<body>
+
+<div id="piano">
+  <div class="white">C</div>
+  <div class="white" >D</div>
+  <div class="white" >E</div>
+  <div class="white" >F</div>
+  <div class="white" >G</div>
+  <div class="white" >A</div>
+  <div class="white">B</div>
+
+  <div class="black b1">C#</div>
+  <div class="black b2">D#</div>
+  <div class="black b3">F#</div>
+  <div class="black b4">G#</div>
+  <div class="black b5">A#</div>
+</div>
+<audio id="C" src="./piano/a48.mp3"></audio>
+<audio id="D" src="./piano/a84.mp3"></audio>
+<audio id="E" src="./piano/b89.mp3"></audio>
+<audio id="F" src="./piano/b67.mp3"></audio>
+<audio id="G" src="./piano/a52.mp3"></audio>
+<audio id="A" src="./piano/a67.mp3"></audio>
+<audio id="B" src="./piano/a66.mp3"></audio>
+
+
+<audio id="C#" src="./piano/a48.mp3"></audio>
+<audio id="D#" src="./piano/b87.mp3"></audio>
+<audio id="F#" src="./piano/a48.mp3"></audio>
+<audio id="G#" src="./piano/b80.mp3"></audio>
+<audio id="A#" src="./piano/b79.mp3"></audio>
+<script src="pio.js"></script>
+</body>
+</html>
